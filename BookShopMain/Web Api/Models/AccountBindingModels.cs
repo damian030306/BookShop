@@ -35,6 +35,9 @@ namespace Web_Api.Models
     public class RegisterBindingModel
     {
         [Required]
+        [Display(Name = "Nickname")]
+        public string Nickname { get; set; }
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
