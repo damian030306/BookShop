@@ -1,4 +1,5 @@
 ﻿using BookShopUI.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,10 +15,12 @@ namespace BookShopUI.Helpers
     public class APIHelper : IAPIHelper
     {
         public HttpClient apiClient;
+        private IAuthor author1;
 
-        public APIHelper()
+        public APIHelper(IAuthor author)
         {
             InitializeClient();
+            author1 = author;
         }
 
         private void InitializeClient()
@@ -46,6 +49,30 @@ namespace BookShopUI.Helpers
                 {
                     var result = await response.Content.ReadAsAsync<AuthenticatedUser>();
                     return result;
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
+        public async Task GetAuthor(string token)
+        {
+            apiClient.DefaultRequestHeaders.Clear();
+            apiClient.DefaultRequestHeaders.Accept.Clear();
+            apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            apiClient.DefaultRequestHeaders.Add("Authorization", $"Bearer { token }");
+
+            using (HttpResponseMessage response = await apiClient.GetAsync("/api/Authors2"))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsAsync<Author>();
+                    author1.LastName = result.LastName;
+
+                    //var autorzy = JsonConvert.DeserializeObject<List<Author>>(result);
+                  
+
                 }
                 else
                 {

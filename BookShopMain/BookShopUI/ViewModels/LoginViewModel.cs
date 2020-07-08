@@ -91,6 +91,8 @@ namespace BookShopUI.ViewModels
             {
                 ErrorMessage = "";
                 var result = await apiHelper1.Authenticate(UserName, Password);
+                { }//
+                await apiHelper1.GetAuthor(result.Access_Token);
             }
             catch (Exception ex)
             {

@@ -107,10 +107,14 @@ C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\bin\Microsoft.A
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\bin\System.Web.Http.Owin.xml
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.csprojAssemblyReference.cache
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.csproj.CoreCompileInputs.cache
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.csproj.CopyComplete
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.dll
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.pdb
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\bin\Swashbuckle.Core.dll
 C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\bin\WebActivatorEx.dll
+C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web_Api.Migrations.InitialCreate.resources
+C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.csproj.GenerateResource.cache
+C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web_Api.Migrations.Initial.resources
+C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web_Api.Migrations.Initial1.resources
+C:\Users\Jackie\Documents\Projects\BookShop\BookShopMain\Web Api\obj\Debug\Web Api.csprojAssemblyReference.cache

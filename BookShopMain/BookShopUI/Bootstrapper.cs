@@ -1,4 +1,5 @@
 ﻿using BookShopUI.Helpers;
+using BookShopUI.Models;
 using BookShopUI.ViewModels;
 using Caliburn.Micro;
 using System;
@@ -28,7 +29,10 @@ namespace BookShopUI
             _container.Instance(_container);
 
             _container
-                .Singleton<IWindowManager, WindowManager>().Singleton<IEventAggregator, EventAggregator>().Singleton<IAPIHelper, APIHelper>();
+                .Singleton<IWindowManager, WindowManager>()
+                .Singleton<IEventAggregator, EventAggregator>()
+                .Singleton<IAuthor, Author>()
+                .Singleton<IAPIHelper, APIHelper>();
 
 
 
