@@ -24,10 +24,18 @@ namespace BookShopUI.ViewModels
             _container = container;
 
             _events.Subscribe(this);
-          
-            ActivateItem(_container.GetInstance<LoginViewModel>());
-        }
 
+            // ActivateItem(_container.GetInstance<LoginViewModel>());
+            ActivateItem(IoC.Get<LoginViewModel>());
+        }
+        public void Exit()
+        {
+            TryClose();
+        }
+        public void LogOut()
+        {
+            ActivateItem(IoC.Get<LoginViewModel>());
+        }
         public void Handle(LogOnEvent message)
         {
             ActivateItem(_authorVM);

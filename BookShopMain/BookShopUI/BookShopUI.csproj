@@ -87,6 +87,8 @@
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\IAuthor.cs" />
+    <Compile Include="Models\IPublishingHouse.cs" />
+    <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="ViewModels\AuthorViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
@@ -96,6 +98,9 @@
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublishingHouseView.xaml.cs">
+      <DependentUpon>PublishingHouseView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
@@ -112,6 +117,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PublishingHouseView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

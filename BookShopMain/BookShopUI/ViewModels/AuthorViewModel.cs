@@ -39,9 +39,10 @@ namespace BookShopUI.ViewModels
                 }
                 else
                 {
-                    _status.UpdateMessage("Błąd", "Wystąpił nieoczekiwany błąd");
+                    _status.UpdateMessage("Błąd", ex.Message);
                     _window.ShowDialog(_status);
                 }
+                TryClose();
                 
             }
         }

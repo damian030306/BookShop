@@ -8,11 +8,12 @@
         Title="ShellView" Height="450" Width="800">
     <DockPanel>
         <Menu DockPanel.Dock="Top" FontSize="18">
-            <MenuItem Header="_File">
-
+            <MenuItem Header="Aplikacja" MinWidth="146" Width="146">
+                <MenuItem x:Name="Exit" Header="Wyłącz aplikację" Width="auto" Margin="-30,0,-45,0"/>
             </MenuItem>
-            <MenuItem Header="_Account">
-                <MenuItem x:Name="LoginScreen" Header="_Login" />
+            <MenuItem Header="Konto">
+                <MenuItem x:Name="LoginScreen" Header="Zaloguj się"  Padding="0" Margin="0"/>
+                <MenuItem x:Name="LogOut" Header="Wyloguj się"  Padding="0" Margin="0" HorizontalAlignment="Right" Width="177"/>
             </MenuItem>
         </Menu>
         <Grid>

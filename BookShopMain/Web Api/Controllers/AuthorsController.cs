@@ -42,7 +42,7 @@ namespace Web_Api.Controllers
         {
             return db.Authors.First();
         }
-        [Authorize(Roles = "Admin")]
+       // [Authorize(Roles = "Admin")]
         [Route("api/Authors3")]
         public async Task <List<Author>> GetAll2()
         {
