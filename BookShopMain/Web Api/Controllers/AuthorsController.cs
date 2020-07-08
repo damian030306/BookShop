@@ -14,7 +14,7 @@ using Web_Api.Models;
 
 namespace Web_Api.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class AuthorsController : ApiController
     {
         private Web_ApiContext db = new Web_ApiContext();

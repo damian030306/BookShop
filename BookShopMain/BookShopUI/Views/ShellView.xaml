@@ -13,6 +13,7 @@
                 <MenuItem x:Name="PublishingHouse1" Header="Wydawnictwa" />
                 <MenuItem x:Name="Authors1" Header="Autorzy" />
                 <MenuItem x:Name="Books1" Header="Książki" />
+                <MenuItem x:Name="AuthorsAdd1" Header="Dodaj autora" />
             </MenuItem>
             <MenuItem Header="Konto">
                 <MenuItem x:Name="LogIn" Header="Zaloguj się"  Padding="0" Margin="0"/>

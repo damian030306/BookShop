@@ -39,13 +39,13 @@
                   Grid.ColumnSpan="2" 
                   AutoGenerateColumns="False"  ScrollViewer.CanContentScroll="True" 
       ScrollViewer.VerticalScrollBarVisibility="Auto"
-      ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="700" MaxWidth="600" MinWidth="200">
+      ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="790" MaxWidth="790" MinWidth="790">
             <DataGrid.Columns>
                 <DataGridTextColumn MinWidth="50" Width="50" Header="Id" Binding="{Binding id}"/>
                 <DataGridTextColumn MinWidth="100" Width="250" Header="Nazwa" Binding="{Binding Name}"/>
                 <DataGridTextColumn MinWidth="100" Width="250" Header="Opis" Binding="{Binding Description}"/>
-                <DataGridTextColumn MinWidth="50" Width="50" Header="Id wydawnictwa" Binding="{Binding PublishingHouseId }"/>
-                <DataGridTextColumn MinWidth="50" Width="50" Header="Id autora" Binding="{Binding AuthorId }"/>
+                <DataGridTextColumn MinWidth="50" Width="190" Header="Id wydawnictwa" Binding="{Binding PublishingHouseId }"/>
+                <DataGridTextColumn MinWidth="50" Width="150" Header="Id autora" Binding="{Binding AuthorId }"/>
 
 
 

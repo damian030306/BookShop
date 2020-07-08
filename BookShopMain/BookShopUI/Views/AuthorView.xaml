@@ -18,9 +18,9 @@
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="AuthorList" FontSize="48" Grid.Row="0"
+        <TextBlock Text="Lista Autorów" FontSize="48" Grid.Row="0"
                    Grid.Column="0"  Margin="15 0 0 15"/>
-        <TextBlock Text="Items" Grid.Row="1" Grid.Column="0" />
+      
         <!--<ListBox  x:Name="Authors" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
                  MinHeight="200" MinWidth="150">
             <ListBox.ItemTemplate>
