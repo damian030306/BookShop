@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookShopUI.Views"
              mc:Ignorable="d" Background="White" FontSize="26"
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="650" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -34,13 +34,18 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>-->
-        <DataGrid x:Name="Authors" AlternatingRowBackground="Green" CanUserAddRows="False" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
+        <DataGrid x:Name="Authors" AlternatingRowBackground="Gray" CanUserAddRows="False" 
+                  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
                   AutoGenerateColumns="False"  ScrollViewer.CanContentScroll="True" 
       ScrollViewer.VerticalScrollBarVisibility="Auto"
-      ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="400" MaxWidth="400">
+      ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="400" MaxWidth="780" MinWidth="200">
             <DataGrid.Columns>
-                <DataGridTextColumn MinWidth="100" Width="150" Header="FirstName" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn MinWidth="100" Width="150" Header="FirstName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn MinWidth="50" Width="50" Header="Id" Binding="{Binding id}"/>
+                <DataGridTextColumn MinWidth="100" Width="230" Header="Imie" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn MinWidth="100" Width="230" Header="Nazwisko" Binding="{Binding LastName}"/>
+                
+                <DataGridTextColumn MinWidth="100" Width="230" Header="Data Urodzenia" Binding="{Binding DateOfBirth, StringFormat=d}"/>
+                
                 
             </DataGrid.Columns>
 

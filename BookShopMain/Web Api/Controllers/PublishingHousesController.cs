@@ -14,6 +14,15 @@ using Web_Api.Models;
 
 namespace Web_Api.Controllers
 {
+   
+    public class PublishingHouseWithCount
+    {
+        public int id { get; set; }
+        public string Name { get; set; }
+        public DateTime OpeningDate { get; set; }
+        public int BookCount { get; set; }
+    }
+    [Authorize]
     public class PublishingHousesController : ApiController
     {
         private Web_ApiContext db = new Web_ApiContext();
@@ -37,11 +46,31 @@ namespace Web_Api.Controllers
             return Ok(publishingHouse);
         }
         [Route("api/PublishingHouses3")]
-        public async Task<List<PublishingHouse>> GetAll2()
+        public async Task<List<PublishingHouse>> GetAll3()
 
         {
+            
             return await db.PublishingHouses.ToListAsync();
         }
+        //[Route("api/PublishingHouses2")]
+        //public async Task<List<PublishingHouse>> GetAll2()
+
+        //{
+        //    List<PublishingHouseWithCount> PublishingHouseWithCounts = new List<PublishingHouseWithCount>();
+        //    List<PublishingHouse> publishingHouses = db.PublishingHouses.ToList();
+        //    foreach(PublishingHouse publishing in publishingHouses)
+        //    {
+        //        PublishingHouseWithCount publishingHouseWithCount = new PublishingHouseWithCount();
+        //        publishingHouseWithCount.id = publishing.id;
+        //        publishingHouseWithCount.Name = publishing.Name;
+        //        publishingHouseWithCount.OpeningDate = publishing.OpeningDate;
+        //        publishingHouseWithCount.BookCount = db.Books.Where(q => q.id == publishing.id).Count();
+        //        PublishingHouseWithCounts.Add(publishingHouseWithCount);
+        //    }
+
+
+        //    return  PublishingHouseWithCounts;
+        //}
         // PUT: api/PublishingHouses/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutPublishingHouse(int id, PublishingHouse publishingHouse)

@@ -8,6 +8,6 @@ namespace BookShopUI.Models
         string FirstName { get; set; }
         int id { get; set; }
         string LastName { get; set; }
-        string Token { get; set; }
+       // string Token { get; set; }
     }
 }

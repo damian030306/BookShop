@@ -28,6 +28,14 @@ namespace BookShopUI.ViewModels
             // ActivateItem(_container.GetInstance<LoginViewModel>());
             ActivateItem(IoC.Get<LoginViewModel>());
         }
+        public void LogIn()
+        {
+            ActivateItem(IoC.Get<LoginViewModel>());
+        }
+        public void Authors1()
+        {
+            ActivateItem(IoC.Get<AuthorViewModel>());
+        }
         public void Exit()
         {
             TryClose();
