@@ -13,15 +13,37 @@ namespace BookShopUI.ViewModels
     public class AuthorViewModel : Screen
     {
         IAuthorEndPoint _authorEndPoint;
-        public AuthorViewModel(IAuthorEndPoint authorEndPoint)
+        private readonly StatusInfoViewModel _status;
+            private readonly IWindowManager _window;
+        public AuthorViewModel(IAuthorEndPoint authorEndPoint, StatusInfoViewModel status, IWindowManager window)
         {
             _authorEndPoint = authorEndPoint;
+            _status = status;
+            _window = window;
            
         }
         protected override async void OnViewLoaded(object view)
         {
             base.OnViewLoaded(view);
-            await LoadAuthor();
+            try
+            {
+                await LoadAuthor();
+            }
+           catch(Exception ex)
+            {
+                //
+                if(ex.Message == "Unauthorized")
+                {
+                    _status.UpdateMessage("Brak dostępu", "Nie masz pozwolenia aby wejść w tą sekcje danych");
+                    _window.ShowDialog(_status);
+                }
+                else
+                {
+                    _status.UpdateMessage("Błąd", "Wystąpił nieoczekiwany błąd");
+                    _window.ShowDialog(_status);
+                }
+                
+            }
         }
         public async Task LoadAuthor()
         {

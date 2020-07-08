@@ -11,8 +11,8 @@ namespace BookShopUI.ViewModels
 {
     public class LoginViewModel : Screen
     {
-        private string _userName;
-        private string _password;
+        private string _userName ="teest1";
+        private string _password = "Password123!";
         private IAPIHelper apiHelper1;
         IEventAggregator _events;
 

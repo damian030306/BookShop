@@ -39,8 +39,8 @@
       ScrollViewer.VerticalScrollBarVisibility="Auto"
       ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="400" MaxWidth="400">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}"/>
-                <DataGridTextColumn Header="FirstName" Binding="{Binding LastName}"/>
+                <DataGridTextColumn MinWidth="100" Width="150" Header="FirstName" Binding="{Binding FirstName}"/>
+                <DataGridTextColumn MinWidth="100" Width="150" Header="FirstName" Binding="{Binding LastName}"/>
                 
             </DataGrid.Columns>
 

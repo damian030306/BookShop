@@ -14,6 +14,7 @@ using Web_Api.Models;
 
 namespace Web_Api.Controllers
 {
+    [Authorize]
     public class AuthorsController : ApiController
     {
         private Web_ApiContext db = new Web_ApiContext();
@@ -23,7 +24,7 @@ namespace Web_Api.Controllers
         {
             return db.Authors;
         }
-
+       
         // GET: api/Authors/5
         [ResponseType(typeof(Author))]
         public async Task<IHttpActionResult> GetAuthor(int id)
@@ -41,6 +42,7 @@ namespace Web_Api.Controllers
         {
             return db.Authors.First();
         }
+        [Authorize(Roles = "Admin")]
         [Route("api/Authors3")]
         public async Task <List<Author>> GetAll2()
         {
