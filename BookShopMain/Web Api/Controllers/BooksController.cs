@@ -37,6 +37,13 @@ namespace Web_Api.Controllers
             return Ok(book);
         }
 
+        [Route("api/Books3")]
+        public async Task<List<Book>> GetAll3()
+
+        {
+
+            return await db.Books.ToListAsync();
+        }
         // PUT: api/Books/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutBook(int id, Book book)

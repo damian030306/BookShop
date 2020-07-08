@@ -28,7 +28,8 @@ namespace BookShopUI
         {
             _container.Instance(_container)
                 .PerRequest<IAuthorEndPoint, AuthorEndPoint>()
-                .PerRequest<IPublishingHouseEndPoint, PublishingHouseEndPoint>();
+                .PerRequest<IPublishingHouseEndPoint, PublishingHouseEndPoint>()
+                .PerRequest<IBookEndPoint, BookEndPoint>();
 
             _container
                 .Singleton<IWindowManager, WindowManager>()

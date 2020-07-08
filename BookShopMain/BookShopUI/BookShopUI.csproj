@@ -80,24 +80,32 @@
     <Compile Include="EventModels\LogOnEvent.cs" />
     <Compile Include="Helpers\ApiHelper.cs" />
     <Compile Include="Helpers\AuthorEndPoint.cs" />
+    <Compile Include="Helpers\BookEndPoint.cs" />
     <Compile Include="Helpers\Client1.cs" />
     <Compile Include="Helpers\IAPIHelper.cs" />
     <Compile Include="Helpers\IAuthorEndPoint.cs" />
+    <Compile Include="Helpers\IBookEndPoint.cs" />
     <Compile Include="Helpers\IPublishingHouseEndPoint.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
     <Compile Include="Helpers\PublishingHouseEndPoint.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\IAuthor.cs" />
+    <Compile Include="Models\IBook.cs" />
     <Compile Include="Models\IPublishingHouse.cs" />
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="ViewModels\AuthorViewModel.cs" />
+    <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\PublishingHouseViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\StatusInfoViewModel.cs" />
     <Compile Include="Views\AuthorView.xaml.cs">
       <DependentUpon>AuthorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookView.xaml.cs">
+      <DependentUpon>BookView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -116,6 +124,10 @@
       <DependentUpon>StatusInfoView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\AuthorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

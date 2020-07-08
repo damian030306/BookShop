@@ -36,6 +36,10 @@ namespace BookShopUI.ViewModels
         {
             ActivateItem(IoC.Get<AuthorViewModel>());
         }
+        public void Books1()
+        {
+            ActivateItem(IoC.Get<BookViewModel>());
+        }
         public void Exit()
         {
             TryClose();
