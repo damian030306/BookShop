@@ -8,7 +8,8 @@ namespace BookShopUI.Models
 {
     public class PublishingHouse : IPublishingHouse
     {
+        public int id { get; set; }
         public string Name { get; set; }
-        public int CountBook { get; set; }
+        public DateTime OpeningDate { get; set; }
     }
 }

@@ -83,7 +83,9 @@
     <Compile Include="Helpers\Client1.cs" />
     <Compile Include="Helpers\IAPIHelper.cs" />
     <Compile Include="Helpers\IAuthorEndPoint.cs" />
+    <Compile Include="Helpers\IPublishingHouseEndPoint.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
+    <Compile Include="Helpers\PublishingHouseEndPoint.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\IAuthor.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="ViewModels\AuthorViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\PublishingHouseViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\StatusInfoViewModel.cs" />
     <Compile Include="Views\AuthorView.xaml.cs">

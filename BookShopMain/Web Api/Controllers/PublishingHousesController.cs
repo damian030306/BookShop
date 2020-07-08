@@ -36,7 +36,12 @@ namespace Web_Api.Controllers
 
             return Ok(publishingHouse);
         }
+        [Route("api/PublishingHouses3")]
+        public async Task<List<PublishingHouse>> GetAll2()
 
+        {
+            return await db.PublishingHouses.ToListAsync();
+        }
         // PUT: api/PublishingHouses/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutPublishingHouse(int id, PublishingHouse publishingHouse)

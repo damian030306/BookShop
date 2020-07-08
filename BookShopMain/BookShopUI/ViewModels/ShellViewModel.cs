@@ -36,6 +36,10 @@ namespace BookShopUI.ViewModels
         {
             ActivateItem(IoC.Get<LoginViewModel>());
         }
+        public void PublishingHouse1()
+        {
+            ActivateItem(IoC.Get<PublishingHouseViewModel>());
+        }
         public void Handle(LogOnEvent message)
         {
             ActivateItem(_authorVM);

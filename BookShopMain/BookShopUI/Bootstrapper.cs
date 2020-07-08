@@ -27,7 +27,8 @@ namespace BookShopUI
         protected override void Configure()
         {
             _container.Instance(_container)
-                .PerRequest<IAuthorEndPoint, AuthorEndPoint>();
+                .PerRequest<IAuthorEndPoint, AuthorEndPoint>()
+                .PerRequest<IPublishingHouseEndPoint, PublishingHouseEndPoint>();
 
             _container
                 .Singleton<IWindowManager, WindowManager>()

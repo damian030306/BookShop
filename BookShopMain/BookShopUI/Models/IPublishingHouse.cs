@@ -1,8 +1,11 @@
-﻿namespace BookShopUI.Models
+﻿using System;
+
+namespace BookShopUI.Models
 {
     public interface IPublishingHouse
     {
-        int CountBook { get; set; }
+        int id { get; set; }
         string Name { get; set; }
+        DateTime OpeningDate { get; set; }
     }
 }

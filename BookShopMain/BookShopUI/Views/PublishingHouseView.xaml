@@ -4,9 +4,52 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BookShopUI.Views"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" Background="White" FontSize="26"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Lista wydawnict " FontSize="48" Grid.Row="0"
+                   Grid.Column="0"  Margin="15 0 0 15"/>
+        <TextBlock Text="Items" Grid.Row="1" Grid.Column="0" />
+        <!--<ListBox  x:Name="Authors" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" 
+                 MinHeight="200" MinWidth="150">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding FirstName}"/>
+
+                        <TextBlock Text="{Binding LastName}"/>
+                    </StackPanel>
+                   
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
+        <DataGrid x:Name="PublishingHouses" AlternatingRowBackground="Green" CanUserAddRows="False" Grid.Row="2" Grid.Column="0"
+                  Grid.ColumnSpan="3" 
+                  AutoGenerateColumns="False"  ScrollViewer.CanContentScroll="True" 
+      ScrollViewer.VerticalScrollBarVisibility="Auto"
+      ScrollViewer.HorizontalScrollBarVisibility="Auto" MaxHeight="400" MaxWidth="400">
+            <DataGrid.Columns>
+                <DataGridTextColumn MinWidth="100" Width="150" Header="ID" Binding="{Binding id}"/>
+                <DataGridTextColumn MinWidth="100" Width="150" Header="Nazwa" Binding="{Binding Name}"/>
+                <DataGridTextColumn MinWidth="100" Width="150" Header="Nazwa" Binding="{Binding OpeningDate, StringFormat=d}" />
+
+
+
+
+
+            </DataGrid.Columns>
+
+        </DataGrid>
     </Grid>
 </UserControl>

@@ -10,10 +10,11 @@
         <Menu DockPanel.Dock="Top" FontSize="18">
             <MenuItem Header="Aplikacja" MinWidth="146" Width="146">
                 <MenuItem x:Name="Exit" Header="Wyłącz aplikację" Width="auto" Margin="-30,0,-45,0"/>
+                <MenuItem x:Name="PublishingHouse1" Header="Wydawnictwa" />
             </MenuItem>
             <MenuItem Header="Konto">
                 <MenuItem x:Name="LoginScreen" Header="Zaloguj się"  Padding="0" Margin="0"/>
-                <MenuItem x:Name="LogOut" Header="Wyloguj się"  Padding="0" Margin="0" HorizontalAlignment="Right" Width="177"/>
+                <MenuItem x:Name="LogOut" Header="Wyloguj się"  Padding="0" Margin="0"/>
             </MenuItem>
         </Menu>
         <Grid>
