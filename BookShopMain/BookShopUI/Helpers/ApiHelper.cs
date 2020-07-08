@@ -22,7 +22,13 @@ namespace BookShopUI.Helpers
             InitializeClient();
             author1 = author;
         }
-
+        public HttpClient ApiClient
+        {
+            get
+            {
+                return apiClient;
+            }
+        }
         private void InitializeClient()
         {
             string webAdress = ConfigurationManager.AppSettings["webAdress"];

@@ -1,4 +1,5 @@
-﻿using BookShopUI.Helpers;
+﻿using BookShopUI.EventModels;
+using BookShopUI.Helpers;
 using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,12 @@ namespace BookShopUI.ViewModels
         private string _userName;
         private string _password;
         private IAPIHelper apiHelper1;
+        IEventAggregator _events;
 
-        public LoginViewModel(IAPIHelper apiHelper)
+        public LoginViewModel(IAPIHelper apiHelper, IEventAggregator events)
         {
             apiHelper1 = apiHelper;
+            _events = events;
         }
 
         public string UserName
@@ -93,6 +96,7 @@ namespace BookShopUI.ViewModels
                 var result = await apiHelper1.Authenticate(UserName, Password);
                 { }//
                 await apiHelper1.GetAuthor(result.Access_Token);
+                _events.PublishOnUIThread(new LogOnEvent());
             }
             catch (Exception ex)
             {

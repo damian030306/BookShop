@@ -41,6 +41,11 @@ namespace Web_Api.Controllers
         {
             return db.Authors.First();
         }
+        [Route("api/Authors3")]
+        public async Task <List<Author>> GetAll2()
+        {
+            return await db.Authors.ToListAsync();
+        }
         // PUT: api/Authors/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutAuthor(int id, Author author)
