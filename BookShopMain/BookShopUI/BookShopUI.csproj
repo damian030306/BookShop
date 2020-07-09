@@ -90,8 +90,10 @@
     <Compile Include="Helpers\IBookEndPoint.cs" />
     <Compile Include="Helpers\IBookPostEndPoint.cs" />
     <Compile Include="Helpers\IPublishingHouseEndPoint.cs" />
+    <Compile Include="Helpers\IPublishingHousePostEndPoint.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
     <Compile Include="Helpers\PublishingHouseEndPoint.cs" />
+    <Compile Include="Helpers\PublishingHousePostEndPoint.cs" />
     <Compile Include="Models\AuthenticatedUser.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="ViewModels\BookPostViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\PublishingHousePostViewModel.cs" />
     <Compile Include="ViewModels\PublishingHouseViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ViewModels\StatusInfoViewModel.cs" />
@@ -124,6 +127,9 @@
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PublishingHousePostView.xaml.cs">
+      <DependentUpon>PublishingHousePostView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PublishingHouseView.xaml.cs">
       <DependentUpon>PublishingHouseView.xaml</DependentUpon>
@@ -159,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PublishingHousePostView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

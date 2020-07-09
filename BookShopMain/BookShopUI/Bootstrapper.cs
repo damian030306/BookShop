@@ -31,7 +31,8 @@ namespace BookShopUI
                 .PerRequest<IPublishingHouseEndPoint, PublishingHouseEndPoint>()
                 .PerRequest<IBookEndPoint, BookEndPoint>()
                 .PerRequest<IAuthorPostEndPoint, AuthorPostEndPoint>()
-                .PerRequest< IBookPostEndPoint, BookPostEndPoint>();
+                .PerRequest< IBookPostEndPoint, BookPostEndPoint>()
+                .PerRequest<IPublishingHousePostEndPoint, PublishingHousePostEndPoint>();
 
 
             _container

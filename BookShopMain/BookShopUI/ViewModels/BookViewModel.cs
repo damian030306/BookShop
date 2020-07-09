@@ -30,7 +30,7 @@ namespace BookShopUI.ViewModels
             {
                 await LoadBook();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 //
 

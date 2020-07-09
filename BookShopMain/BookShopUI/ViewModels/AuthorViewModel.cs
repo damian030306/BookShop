@@ -29,21 +29,15 @@ namespace BookShopUI.ViewModels
             {
                 await LoadAuthor();
             }
-           catch(Exception ex)
+            catch (Exception)
             {
                 //
-                if(ex.Message == "Unauthorized")
-                {
-                    _status.UpdateMessage("Brak dostępu", "Nie masz pozwolenia aby wejść w tą sekcje danych");
-                    _window.ShowDialog(_status);
-                }
-                else
-                {
-                    _status.UpdateMessage("Błąd", ex.Message);
-                    _window.ShowDialog(_status);
-                }
+
+                _status.UpdateMessage("Brak dostępu", "Nie masz pozwolenia aby wejść w tą sekcje danych");
+                _window.ShowDialog(_status);
+
                 TryClose();
-                
+
             }
         }
         public async Task LoadAuthor()
