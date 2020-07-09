@@ -9,11 +9,12 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top" FontSize="18">
             <MenuItem Header="Aplikacja" MinWidth="146" Width="146">
-                <MenuItem x:Name="Exit" Header="Wyłącz aplikację" Width="auto" Margin="-30,0,-45,0"/>
+                <MenuItem x:Name="Exit" Header="Wyłącz aplikację" Width="auto" />
                 <MenuItem x:Name="PublishingHouse1" Header="Wydawnictwa" />
                 <MenuItem x:Name="Authors1" Header="Autorzy" />
                 <MenuItem x:Name="Books1" Header="Książki" />
                 <MenuItem x:Name="AuthorsAdd1" Header="Dodaj autora" />
+                <MenuItem x:Name="BooksAdd1" Header="Dodaj książkę" />
             </MenuItem>
             <MenuItem Header="Konto">
                 <MenuItem x:Name="LogIn" Header="Zaloguj się"  Padding="0" Margin="0"/>

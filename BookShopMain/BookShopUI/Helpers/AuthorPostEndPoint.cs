@@ -22,7 +22,7 @@ namespace BookShopUI.Helpers
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    // Log successful call?
+                  
                 }
                 else
                 {

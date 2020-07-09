@@ -66,6 +66,8 @@ namespace BookShopUI.ViewModels
             try
             {
                 await _authorPostEndPoint.PostAuthor(author);
+                _status.UpdateMessage("Dodano rekord", "Rekord został dodany do bazy danych");
+                _window.ShowDialog(_status);
             }
             catch (Exception ex)
             {
@@ -80,7 +82,7 @@ namespace BookShopUI.ViewModels
                     _status.UpdateMessage("Błąd", ex.Message);
                     _window.ShowDialog(_status);
                 }
-                TryClose();
+                
 
             }
         }

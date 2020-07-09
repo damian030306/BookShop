@@ -14,6 +14,7 @@ using Web_Api.Models;
 
 namespace Web_Api.Controllers
 {
+    [Authorize]
     public class BooksController : ApiController
     {
         private Web_ApiContext db = new Web_ApiContext();
@@ -87,7 +88,12 @@ namespace Web_Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-
+            PublishingHouse publishingHouse = await db.PublishingHouses.FindAsync(book.PublishingHouseId);
+            Author author = await db.Authors.FindAsync(book.AuthorId);
+            if (publishingHouse == null || author == null)
+            {
+                return NotFound();
+            }
             db.Books.Add(book);
             await db.SaveChangesAsync();
 

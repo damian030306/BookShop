@@ -82,11 +82,13 @@
     <Compile Include="Helpers\AuthorEndPoint.cs" />
     <Compile Include="Helpers\AuthorPostEndPoint.cs" />
     <Compile Include="Helpers\BookEndPoint.cs" />
+    <Compile Include="Helpers\BookPostEndPoint.cs" />
     <Compile Include="Helpers\Client1.cs" />
     <Compile Include="Helpers\IAPIHelper.cs" />
     <Compile Include="Helpers\IAuthorEndPoint.cs" />
     <Compile Include="Helpers\IAuthorPostEndPoint.cs" />
     <Compile Include="Helpers\IBookEndPoint.cs" />
+    <Compile Include="Helpers\IBookPostEndPoint.cs" />
     <Compile Include="Helpers\IPublishingHouseEndPoint.cs" />
     <Compile Include="Helpers\PasswordBoxHelper.cs" />
     <Compile Include="Helpers\PublishingHouseEndPoint.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Models\PublishingHouse.cs" />
     <Compile Include="ViewModels\AuthorPostViewModel.cs" />
     <Compile Include="ViewModels\AuthorViewModel.cs" />
+    <Compile Include="ViewModels\BookPostViewModel.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\PublishingHouseViewModel.cs" />
@@ -109,6 +112,12 @@
     </Compile>
     <Compile Include="Views\AuthorView.xaml.cs">
       <DependentUpon>AuthorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookPostView.xaml.cs">
+      <DependentUpon>BookPostView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookPostViewModel.xaml.cs">
+      <DependentUpon>BookPostViewModel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\BookView.xaml.cs">
       <DependentUpon>BookView.xaml</DependentUpon>
@@ -134,6 +143,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AuthorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookPostView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BookPostViewModel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
